@@ -41,3 +41,5 @@ Carthage/Checkouts
 
 # Swift Package Manager
 .build
+.swiftpm
+ObjectBox.xcodeproj

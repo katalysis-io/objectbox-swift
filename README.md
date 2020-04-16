@@ -56,6 +56,13 @@ Test:
 swift test -Xswiftc -I/usr/local/include -Xswiftc -L/usr/local/lib
 ```
 
+Generate Xcode Project:
+
+```sh
+swift package generate-xcodeproj --xcconfig-overrides ObjectBox.xcconfig
+open ObjectBox.xcodeproj  
+```
+
 How can ObjectBox Help You?
 ---------------------------
 We want ObjectBox to be not only the fastest, but also the most Swift-friendly persistence solution.
