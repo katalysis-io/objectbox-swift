@@ -42,14 +42,14 @@ Install flatbuffers:
 brew install flatbuffers   
 ```
 
-Build:
+Build with Swift Package Manager:
 
 
 ```sh
 swift build -Xswiftc -I/usr/local/include -Xswiftc -L/usr/local/lib
 ```
 
-Test:
+Test with Swift Package Manager:
 
 
 ```sh
