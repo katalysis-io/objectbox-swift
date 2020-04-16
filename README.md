@@ -7,8 +7,6 @@ It will - literally - take just a minute, but help us a lot. Thank you!​ 🙏�
 
 ObjectBox Swift
 ===============
-[![Version](https://img.shields.io/cocoapods/v/ObjectBox.svg?style=flat)](#cocoapods)
-[![Platform](https://img.shields.io/cocoapods/p/ObjectBox.svg?style=flat)](#cocoapods)
 
 ObjectBox is a superfast, light-weight object persistence framework.
 This Swift API seamlessly persists objects on-device for iOS and macOS.
@@ -27,67 +25,36 @@ let oldClauses = query.find()
 Want details? **[Read the guides](https://swift.objectbox.io/)** or
 **[check out the API docs](https://objectbox.io/docfiles/swift/current/)**.
 
-<a name="cocoapods"></a>Adding ObjectBox to your project
---------------------------------------------------------
-[CocoaPods](https://cocoapods.org) is recommended to set up ObjectBox in your project.
-See the [installation docs](https://swift.objectbox.io/install) for alternative setups,
-or the [New to CocoaPods?](#new-to-cocoapods) section below for a quick intro.
-To install the `ObjectBox` pod, add the following line to your Podfile:
+Building ObjectBox
+------------------
 
-```ruby
-  pod 'ObjectBox'
+Install objectbox-c:
+
+```sh
+wget https://raw.githubusercontent.com/objectbox/objectbox-c/master/download.sh
+chmod +x download.sh
+./download.sh
 ```
 
-*Note:* use `pod 'ObjectBox501'` if you are still on Swift 5.0.1. Consider switching to Swift 5.1 to use latest ObjectBox version.
-  
-Then run this to install the ObjectBox framework:
+Install flatbuffers:
 
-```bash
-cd /path/to/your/project/folder/ # whatever folder your Podfile is in.
-pod install
-Pods/ObjectBox/setup.rb myproject.xcodeproj # whatever your Xcode project is named
+```sh
+brew install flatbuffers   
 ```
 
-*Note:* run `Pods/ObjectBox501/setup.rb myproject.xcodeproj` if you are still on Swift 5.0.1.
+Build:
 
-And, don't forget to close the Xcode project (.xcodeproj) and open the workspace (.xcworkspace) instead.
-Now, you are all set to define your first ObjectBox entities;
-e.g. check the [getting started guide](https://swift.objectbox.io/getting-started) or the [example](#example) described below. 
 
-### <a name="new-to-cocoapods"></a>New to CocoaPods?
-
-[CocoaPods](https://cocoapods.org) is a dependency manager and sets up libraries like ObjectBox in your Xcode project.
-To install it, run this in a terminal: 
-
-```bash
-sudo gem install cocoapods
+```sh
+swift build -Xswiftc -I/usr/local/include -Xswiftc -L/usr/local/lib
 ```
 
-In CocoaPods, you keep track of used libraries in a file called "Podfile".
-If you don't have this file yet, navigate to your Xcode project folder and use CocoaPods to create one:
+Test:
 
-```bash
-pod init
+
+```sh
+swift test -Xswiftc -I/usr/local/include -Xswiftc -L/usr/local/lib
 ```
-
-### CocoaPods troubleshooting
-
-If `pod install` fails, try updating CocoaPods first:
-
-    gem update xcodeproj && gem update cocoapods && pod repo update
-
-<a name="example"></a>Example
------------------------------
-In the [Example](Example/) directory, you'll find a "Notes" example app demonstrating ObjectBox's Swift API.
-The example comes with two apps: one for iOS and one for macOS. The iOS example is a full GUI application, whereas the macOS example runs a few operations and then exits.
-
-To setup the example, use CocoaPods to acquire the framework:
-
-    cd Example/
-    pod install # if that fails, update CocoaPods (see Installation)
-    Pods/ObjectBox/setup.rb
-
-This will generate a `NotesExample.xcworkspace` that you can launch to try out ObjectBox.
 
 How can ObjectBox Help You?
 ---------------------------
@@ -119,7 +86,7 @@ Internally, we use [a fork of Sourcery](https://github.com/objectbox/objectbox-s
 
 Source code
 -----------
-Source code for ObjectBox's Swift binding can be found [in the Source folder](Source/README.md).
+Source code for ObjectBox's Swift binding can be found [in the Source folder](Sources).
 
 Other languages/bindings
 ------------------------

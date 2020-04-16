@@ -38,3 +38,6 @@ Carthage/Checkouts
 
 # ObjectBox model backups
 *.json.bak
+
+# Swift Package Manager
+.build
