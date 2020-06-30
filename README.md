@@ -27,6 +27,7 @@ Want details? **[Read the guides](https://swift.objectbox.io/)** or
 
 Building ObjectBox
 ------------------
+This codebase of ObjectBox builds exclusively with spm. It is currently up to date with version 1.3.1 of https://github.com/objectbox/objectbox-swift/
 
 Install objectbox-c:
 
