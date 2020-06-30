@@ -15,7 +15,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "ObjectBox.h"
+#import "../../Sources/CObjectBox/include/ObjectBox.h"
 
 @interface OBErrorHelperTests : XCTestCase
 @end
