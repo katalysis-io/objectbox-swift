@@ -46,14 +46,14 @@ Build with Swift Package Manager:
 
 
 ```sh
-swift build -Xswiftc -I/usr/local/include -Xswiftc -L/usr/local/lib
+swift build -Xcc -I/usr/local/include -Xswiftc -I/usr/local/include -Xswiftc -L/usr/local/lib
 ```
 
 Test with Swift Package Manager:
 
 
 ```sh
-swift test -Xswiftc -I/usr/local/include -Xswiftc -L/usr/local/lib
+swift test -Xcc -I/usr/local/include -Xswiftc -I/usr/local/include -Xswiftc -L/usr/local/lib
 ```
 
 Generate Xcode Project:
